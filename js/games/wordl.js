@@ -203,11 +203,6 @@ export default {
         msg.textContent = 'Need five letters.';
         return;
       }
-      if (!WORDS.includes(draft)) {
-        msg.textContent = 'Not in the word list — try another.';
-        sound.bad();
-        return;
-      }
       const marks = score(draft);
       guesses.push(draft);
       for (let i = 0; i < 5; i++) {
