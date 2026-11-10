@@ -15,6 +15,12 @@ const TONES = {
   Board: '#c79bff',
   Card: '#ff8fa3',
   Memory: '#6ee7e7',
+  Shooter: '#ff5c7a',
+  Racing: '#ffb545',
+  Strategy: '#7aa2ff',
+  Platform: '#7cf6c8',
+  Word: '#c79bff',
+  Rhythm: '#6ee7e7',
 };
 
 function syncSound() {
@@ -41,17 +47,17 @@ function teardown() {
 function renderHub(filter = 'All') {
   teardown();
   document.body.classList.remove('in-game');
-  document.title = 'Arcadia 12 — hand-built browser games';
+  document.title = 'Arcadia — hand-built browser games';
 
   const genres = ['All', ...new Set(games.map((g) => g.genre))];
 
   view.append(
     el('section', { class: 'hero' }, [
       el('p', { class: 'eyebrow', text: 'No ads · No accounts · Nothing to install' }),
-      el('h1', { html: 'Twelve games,<br><em>actually</em> built by hand.' }),
+      el('h1', { html: 'Twenty-one games,<br><em>actually</em> built by hand.' }),
       el('p', {
         class: 'lede',
-        html: 'Every game here has its own rules, its own code and its own feel — a snake that wraps, a Tetris with wall kicks and a 7-bag randomiser, a Connect Four that plays a real minimax search. <strong>Nothing is a reskin of anything else.</strong>',
+        html: 'Every game here has its own rules, its own code and its own feel — a first-person raycaster, a projected 3D road, CSS-transformed 3D blocks, a tower defence with real pathing, an Othello search, a generated platformer. <strong>Nothing is a reskin of anything else.</strong>',
       }),
     ]),
     el('div', { class: 'filters', role: 'group', 'aria-label': 'Filter by genre' },
@@ -103,7 +109,7 @@ function openGame(id) {
   }
   teardown();
   document.body.classList.add('in-game');
-  document.title = `${game.title} — Arcadia 12`;
+  document.title = `${game.title} — Arcadia`;
 
   const restartBtn = el('button', { class: 'pill-btn', type: 'button', text: 'Restart' });
   const stageHost = el('div', { class: 'stage-host' });

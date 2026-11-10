@@ -10,6 +10,15 @@ import sudoku from './sudoku.js';
 import rally from './rally.js';
 import signal from './signal.js';
 import klondike from './klondike.js';
+import corridor from './corridor.js';
+import overdrive from './overdrive.js';
+import stacker from './stacker.js';
+import match3 from './match3.js';
+import towerdef from './towerdef.js';
+import platformer from './platformer.js';
+import reversi from './reversi.js';
+import pulse from './pulse.js';
+import wordl from './wordl.js';
 
 export const games = [
   serpent,
@@ -24,4 +33,13 @@ export const games = [
   rally,
   signal,
   klondike,
+  corridor,
+  overdrive,
+  stacker,
+  match3,
+  towerdef,
+  platformer,
+  reversi,
+  pulse,
+  wordl,
 ];
