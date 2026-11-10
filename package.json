@@ -1,0 +1,11 @@
+{
+  "name": "arcadia-12",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Twelve hand-built browser games, served as a static site on GitHub Pages.",
+  "scripts": {
+    "check": "node --check js/app.js && node --check js/lib/util.js && node --check js/lib/audio.js && node --check js/lib/store.js && node --check js/lib/ui.js",
+    "serve": "python3 -m http.server 8000"
+  }
+}
